@@ -157,12 +157,12 @@ function countUp() {
     requestAnimationFrame(step);
   });
 }
-const goStores = () => $("#stores").scrollIntoView({ behavior: "smooth" });
+const goStores = () => { location.hash = "#stores"; };
 document.addEventListener("click", e => {
   if (e.target.closest(".star")) return;
   const pk = e.target.closest("[data-pick]"); if (pk) { D.cat = "all"; D.zone = "all"; D.q = ""; renderDir(); }
   const hc = e.target.closest("[data-hc]"); if (hc) { D.cat = hc.dataset.hc; D.q = ""; D.zone = "all"; $("#hq").value = ""; renderDir(); return goStores(); }
-  const zr = e.target.closest("[data-zr]"); if (zr && zr.dataset.zr === "4") return $("#visit").scrollIntoView({ behavior: "smooth" });
+  const zr = e.target.closest("[data-zr]"); if (zr && zr.dataset.zr === "4") return (location.hash = "#visit");
   if (zr) { D.zone = zr.dataset.zr; D.cat = "all"; D.q = ""; $("#hq").value = ""; renderDir(); return goStores(); }
   const lt2 = e.target.closest("[data-letter]"); if (lt2) { D.letter = D.letter === lt2.dataset.letter ? "" : lt2.dataset.letter; return renderDir(); }
   const vw = e.target.closest("[data-view]"); if (vw) { D.view = vw.dataset.view; return renderDir(); }

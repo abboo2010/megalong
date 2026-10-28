@@ -382,3 +382,7 @@ body.noscroll{overflow:hidden}
 .menu a{white-space:nowrap}
 @media(max-width:1200px){.menu{gap:4px}.menu a{padding:8px 11px;font-size:.88rem}.logo{padding:6px 12px}.lgimg{height:28px}.tools{gap:6px}}
 @media(max-width:1080px) and (min-width:1001px){.menu a{padding:7px 8px;font-size:.82rem}.lang button{padding:6px 7px}}
+/* page views: one menu item = one page */
+[data-page][hidden]{display:none!important}
+main[data-v]:not([data-v=home]):not([data-v=cinema]){padding-top:84px;min-height:70vh}
+.menu a.on{color:var(--or,#ff6a1f)}

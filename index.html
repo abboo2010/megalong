@@ -38,8 +38,8 @@
   </div>
 </header>
 
-<main id="top">
-<section class="hero">
+<main id="top" data-v="home">
+<section class="hero" data-page="home">
   <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
   <a class="newtag" href="#events"><span class="dot"></span><span data-i18n="d6.new">New this week at Megalong</span></a>
   <h1><span data-i18n="d6.h1a">Walk the</span> <em data-i18n="d6.h1b">longest mall</em> <span data-i18n="d6.h1c">in Sabah.</span></h1>
@@ -52,7 +52,7 @@
   <div class="open-badge" id="openBadge"><i></i><span id="openText">&nbsp;</span></div>
 </section>
 
-<section class="long" aria-label="The building">
+<section class="long" aria-label="The building" data-page="home">
   <div class="wrap lgcard rv">
     <figure class="bld">
       <img src="assets/megalong-building.jpg" alt="Megalong Shopping Mall, a long curved building">
@@ -66,7 +66,7 @@
   </div>
 </section>
 
-<section class="sec intents rv" aria-label="Quick links">
+<section class="sec intents rv" aria-label="Quick links" data-page="home">
   <div class="wrap igrid">
     <a class="it c1" href="#stores" data-pick="all"><i><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8Zm3 0V6a3 3 0 0 1 6 0v2"/></svg></i><b data-i18n="d6.i1">Shop</b><span data-i18n="d6.i1p">Fashion, groceries, gadgets and gifts</span></a>
     <a class="it c2" href="#dining"><i><svg viewBox="0 0 24 24"><path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 3c-2 2-2 6 0 8v10"/></svg></i><b data-i18n="d6.i2">Dine</b><span data-i18n="d6.i2p">Local favourites and quick bites</span></a>
@@ -75,7 +75,7 @@
   </div>
 </section>
 
-<section id="featured" class="sec feat">
+<section id="featured" class="sec feat" data-page="stores">
   <div class="wrap">
     <div class="sh rv"><div><p class="eye" data-i18n="d6.ft.eye">Featured stores</p><h2 data-i18n="d6.ft.h">Shop the spotlight</h2></div><a class="lnk ftcta" href="#leasing" data-i18n="d6.ft.cta">Want your store here? Get featured</a></div>
     <div class="ftrow" id="ftrow"></div>
@@ -83,7 +83,7 @@
   </div>
 </section>
 
-<section id="stores" class="sec">
+<section id="stores" class="sec" data-page="stores">
   <div class="wrap">
     <div class="sh rv"><div><p class="eye" data-i18n="d6.dir.eye">Store directory</p><h2 data-i18n="d6.dir.h">Find your favourite store</h2></div><span class="cnt"><b id="dcount">0</b> <span data-i18n="d6.count">stores</span></span></div>
     <div class="dtool rv">
@@ -97,14 +97,14 @@
   </div>
 </section>
 
-<section id="dining" class="sec blue">
+<section id="dining" class="sec blue" data-page="dining">
   <div class="wrap">
     <div class="sh rv"><div><p class="eye" data-i18n="d6.din.eye">Dining</p><h2 data-i18n="d6.din.h">Hungry? We've got you.</h2></div></div>
     <div class="dgrid" id="dining-grid"></div>
   </div>
 </section>
 
-<div id="cinema" class="cinwrap">
+<div id="cinema" class="cinwrap" data-page="cinema">
 <section class="cinhero">
   <div class="wrap">
     <p class="eye" data-i18n="d9.eye">Megalong Cineplex &middot; 3rd Floor</p>
@@ -135,21 +135,21 @@
 </section>
 </div>
 
-<section id="events" class="sec">
+<section id="events" class="sec" data-page="events">
   <div class="wrap">
     <div class="sh rv"><div><p class="eye" data-i18n="d6.ev.eye">Promotions & events</p><h2 data-i18n="d6.ev.h">What's on at Megalong</h2></div><span class="smp" data-i18n="sample">(sample)</span></div>
     <div class="ftrow evrow" id="eventGrid"></div>
   </div>
 </section>
 
-<section id="plan" class="sec blue">
+<section id="plan" class="sec blue" data-page="plan">
   <div class="wrap">
     <div class="sh rv"><div><p class="eye" data-i18n="d6.plan.eye">Floor guide</p><h2 data-i18n="d6.plan.h">Find your way around</h2><p class="lede" data-i18n="d6.plan.p">Pick a level, then tap a shop for details. Sample layout for general guidance.</p></div></div>
     <div class="planwrap"><div class="plan" id="plangrid"></div></div>
   </div>
 </section>
 
-<section id="visit" class="sec">
+<section id="visit" class="sec" data-page="visit">
   <div class="wrap">
     <div class="sh rv"><div><p class="eye" data-i18n="d6.vi.eye">Visit us</p><h2 data-i18n="d6.vi.h">Come say hello</h2></div></div>
     <div class="vgrid">
@@ -165,7 +165,7 @@
   </div>
 </section>
 
-<section class="stats" aria-label="At a glance">
+<section class="stats" aria-label="At a glance" data-page="home">
   <div class="wrap sgrid">
     <div><b data-count="4" id="st1">4</b><span data-i18n="d6.st1">Shopping floors</span></div>
     <div><b data-count="1" id="st2">1</b><span data-i18n="d6.st2">Parking floor</span></div>
@@ -174,7 +174,7 @@
   </div>
 </section>
 
-<section id="leasing" class="sec lease">
+<section id="leasing" class="sec lease" data-page="visit">
   <div class="wrap lgrid">
     <div><p class="eye" data-i18n="d6.le.eye">Leasing</p><h2 data-i18n="d6.le.h">Want your shop at Megalong?</h2><p class="lede" data-i18n="d6.le.p">Join Penampang's busiest shopping destination. Tell us about your business and our leasing team will get in touch.</p></div>
     <form class="lform" id="lform" novalidate>
@@ -222,5 +222,6 @@
 <script src="common.js"></script>
 <script src="cinema.js"></script>
 <script src="app.js"></script>
+<script src="pages.js"></script>
 </body>
 </html>
