@@ -386,3 +386,15 @@ body.noscroll{overflow:hidden}
 [data-page][hidden]{display:none!important}
 main[data-v]{min-height:70vh}
 .menu a.on{color:var(--or,#ff6a1f)}
+/* mobile friendliness */
+html{-webkit-text-size-adjust:100%;scroll-behavior:auto}
+a,button,.chip,.dbtn,.tbtn{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+img,svg{-webkit-touch-callout:none;-webkit-user-drag:none}
+@media(max-width:700px){
+  input,select,textarea{font-size:16px!important}
+  .chip,.tbtn,.lang button,.burger,.listbtn{min-height:40px}
+  body{padding-bottom:76px}
+  .footer{padding-bottom:84px}
+}
+@media(hover:none){.tbtn:hover,.card:hover{transform:none}}
+main[data-v]:not([data-v=home]):not([data-v=cinema]){padding-top:84px}

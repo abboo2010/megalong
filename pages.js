@@ -18,9 +18,16 @@
     });
     document.title = TITLE[page] ? TITLE[page] + " | " + base : orig;
     var t = SUB[id] && document.getElementById(id);
-    if (t) t.scrollIntoView(); else window.scrollTo(0, 0);
+    if (t) t.scrollIntoView({ behavior: "instant" }); else window.scrollTo({ top: 0, behavior: "instant" });
     document.querySelectorAll(".rv:not(.in)").forEach(function (e) { var r = e.getBoundingClientRect(); if (r.top < innerHeight) e.classList.add("in"); });
   }
   window.addEventListener("hashchange", show);
   show();
+})();
+
+/* Disable right-click / long-press menu and image dragging (deterrent only; form fields keep normal behaviour) */
+(function () {
+  var field = function (t) { return t && t.closest && t.closest("input,textarea,select,[contenteditable]"); };
+  document.addEventListener("contextmenu", function (e) { if (!field(e.target)) e.preventDefault(); });
+  document.addEventListener("dragstart", function (e) { if (e.target && e.target.tagName === "IMG") e.preventDefault(); });
 })();
