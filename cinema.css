@@ -44,3 +44,18 @@
 #movies .times{margin-top:auto}
 @media(max-width:1000px){#movies.movies{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){#movies.movies{grid-template-columns:1fr}#movies .movie{grid-template-columns:110px 1fr;gap:14px}#movies .poster{aspect-ratio:2/3}}
+/* 5 per row on wide screens */
+#movies.movies{grid-template-columns:repeat(5,1fr);gap:14px}
+#movies .movie{padding:10px;gap:12px;border-radius:22px}
+#movies .poster{aspect-ratio:2/3;border-radius:16px}
+#movies .poster b{font-size:2rem}
+#movies .mi h3{font-size:1.1rem}
+#movies .mm{font-size:.76rem}
+#movies .ms{font-size:.82rem;margin:6px 0 10px}
+#movies .tag{font-size:.7rem;padding:3px 9px}
+#movies .tbtn{padding:6px 10px;font-size:.8rem;border-radius:11px}
+#movies .times{gap:7px}
+@media(max-width:1180px){#movies.movies{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){#movies.movies{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){#movies.movies{grid-template-columns:1fr}}
+@media(min-width:1181px){#movies .poster{aspect-ratio:4/3}}
