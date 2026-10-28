@@ -1,4 +1,4 @@
-/* One menu item = one page. Hash decides which page is shown (e.g. #cinema). */
+/* Home shows every section; other menu items open one page. Hash decides which page is shown (e.g. #cinema). */
 (function () {
   var main = document.getElementById("top");
   var MAP = { "": "home", top: "home", home: "home", stores: "stores", featured: "stores", dining: "dining", cinema: "cinema",
@@ -11,10 +11,10 @@
     var id = decodeURIComponent(location.hash.replace("#", ""));
     var page = MAP[id] || "home";
     main.setAttribute("data-v", page);
-    document.querySelectorAll("[data-page]").forEach(function (el) { el.hidden = el.getAttribute("data-page") !== page; });
+    document.querySelectorAll("[data-page]").forEach(function (el) { el.hidden = page !== "home" && el.getAttribute("data-page") !== page; });
     document.querySelectorAll(".menu a").forEach(function (a) {
       var h = a.getAttribute("href").replace("#", "");
-      a.classList.toggle("on", MAP[h] === page && page !== "home");
+      a.classList.toggle("on", MAP[h] === page);
     });
     document.title = TITLE[page] ? TITLE[page] + " | " + base : orig;
     var t = SUB[id] && document.getElementById(id);
