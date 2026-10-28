@@ -36,3 +36,11 @@
 #cinema .cinhero{padding:80px 0 30px}
 .cinwrap{scroll-margin-top:0}
 .footer a[href="#cinema"]{display:block}
+/* Now showing: cards side by side, left to right */
+#movies.movies{grid-template-columns:repeat(3,1fr);align-items:stretch}
+#movies .movie{grid-template-columns:1fr;gap:16px;align-content:start}
+#movies .poster{aspect-ratio:3/2}
+#movies .poster b{font-size:2.4rem}
+#movies .times{margin-top:auto}
+@media(max-width:1000px){#movies.movies{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){#movies.movies{grid-template-columns:1fr}#movies .movie{grid-template-columns:110px 1fr;gap:14px}#movies .poster{aspect-ratio:2/3}}
