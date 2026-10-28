@@ -398,3 +398,5 @@ img,svg{-webkit-touch-callout:none;-webkit-user-drag:none}
 }
 @media(hover:none){.tbtn:hover,.card:hover{transform:none}}
 main[data-v]:not([data-v=home]):not([data-v=cinema]){padding-top:84px}
+/* category chips: wrap on wide screens so none are hidden (scroll only on phones) */
+@media(min-width:701px){.fbar .chips{flex-wrap:wrap;overflow:visible;margin:0;padding:4px 2px 10px}}
