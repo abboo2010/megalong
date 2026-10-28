@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ff6a1f">
+<title>Megalong Shopping Mall | Donggongon, Penampang</title>
+<meta name="description" content="Megalong Shopping Mall, Donggongon Penampang. Find stores, dining, events and plan your visit to Sabah's longest mall.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="Megalong Shopping Mall">
+    <!-- PLACEHOLDER WORDMARK: replace with assets/logo.png when the real logo file is available -->
+    <span class="lg">M</span><span class="wm">Megalong</span>
+  </a>
+  <nav class="menu" id="menu">
+    <a href="#stores" data-i18n="d6.nav.stores">Stores</a>
+    <a href="#dining" data-i18n="d6.nav.dining">Dining</a>
+    <a href="#events" data-i18n="d6.nav.events">Events</a>
+    <a href="#plan" data-i18n="d6.nav.plan">Floor Guide</a>
+    <a href="#visit" class="cta" data-i18n="d6.nav.visit">Visit Us</a>
+  </nav>
+  <div class="tools">
+    <div class="lang" role="group" aria-label="Language"><button data-lang="en" class="on">EN</button><button data-lang="ms">BM</button><button data-lang="zh">中文</button></div>
+    <button class="listbtn" id="listBtn" aria-label="My list">&#9733; <b id="listCount">0</b></button>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  <a class="newtag" href="#events"><span class="dot"></span><span data-i18n="d6.new">New this week at Megalong</span></a>
+  <h1><span data-i18n="d6.h1a">Walk the</span> <em data-i18n="d6.h1b">longest mall</em> <span data-i18n="d6.h1c">in Sabah.</span></h1>
+  <p class="sub" data-i18n="d6.sub">Fashion, food, family fun and everyday needs, all along one long stretch in Donggongon.</p>
+  <form class="search" id="hform" autocomplete="off">
+    <input id="hq" type="search" data-i18n-ph="d6.search" placeholder="Search a store, brand or food..." aria-label="Search a store">
+    <button class="btn" type="submit" data-i18n="d6.find">Find a Store</button>
+  </form>
+  <div class="chips" id="hchips"></div>
+  <div class="open-badge" id="openBadge"><i></i><span id="openText">&nbsp;</span></div>
+</section>
+
+<section class="long" aria-label="The building">
+  <div class="wrap lgcard rv">
+    <figure class="bld">
+      <img src="assets/megalong-building.jpg" alt="Megalong Shopping Mall, a long curved building">
+    </figure>
+    <div class="lgtxt">
+      <p class="eye" data-i18n="d6.lg.eye">Sabah's longest mall</p>
+      <h2 data-i18n="d6.lg.h">One long building, four shopping floors</h2>
+      <p class="lgp" data-i18n="d6.lg.p">Tap a floor to see what is inside. Parking is on the 4th floor.</p>
+      <div class="ribbon" id="ribbon"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec intents rv" aria-label="Quick links">
+  <div class="wrap igrid">
+    <a class="it c1" href="#stores" data-pick="all"><i><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8Zm3 0V6a3 3 0 0 1 6 0v2"/></svg></i><b data-i18n="d6.i1">Shop</b><span data-i18n="d6.i1p">Fashion, groceries, gadgets and gifts</span></a>
+    <a class="it c2" href="#dining"><i><svg viewBox="0 0 24 24"><path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M17 3c-2 2-2 6 0 8v10"/></svg></i><b data-i18n="d6.i2">Dine</b><span data-i18n="d6.i2p">Local favourites and quick bites</span></a>
+    <a class="it c3" href="#events"><i><svg viewBox="0 0 24 24"><path d="M4 8h16v12H4zM4 8l2-4h12l2 4M12 8v12"/></svg></i><b data-i18n="d6.i3">Events</b><span data-i18n="d6.i3p">Sales, fairs and family days</span></a>
+    <a class="it c4" href="#visit"><i><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg></i><b data-i18n="d6.i4">Get here</b><span data-i18n="d6.i4p">Hours, map and directions</span></a>
+  </div>
+</section>
+
+<section id="featured" class="sec feat">
+  <div class="wrap">
+    <div class="sh rv"><div><p class="eye" data-i18n="d6.ft.eye">Featured stores</p><h2 data-i18n="d6.ft.h">Shop the spotlight</h2></div><a class="lnk ftcta" href="#leasing" data-i18n="d6.ft.cta">Want your store here? Get featured</a></div>
+    <div class="ftrow" id="ftrow"></div>
+    <p class="ftnote" data-i18n="d6.ft.note">Featured placements are paid promotions. (Sample content)</p>
+  </div>
+</section>
+
+<section id="stores" class="sec">
+  <div class="wrap">
+    <div class="sh rv"><div><p class="eye" data-i18n="d6.dir.eye">Store directory</p><h2 data-i18n="d6.dir.h">Find your favourite store</h2></div><span class="cnt"><b id="dcount">0</b> <span data-i18n="d6.count">stores</span></span></div>
+    <div class="dtool rv">
+      <label class="dsearch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="dq" type="search" autocomplete="off" data-i18n-ph="d6.dsearch2" placeholder="Type a store name, e.g. Giant, Burger..."><button type="button" id="dqx" aria-label="Clear" hidden>&times;</button></label>
+      <label class="dzone"><select id="dzone" aria-label="Floor"></select></label>
+    </div>
+    <div class="fbar"><div class="chips" id="cchips"></div></div>
+    <div class="dsum"><span id="dsum"></span><button type="button" id="dclear" class="lnk" hidden data-i18n="d6.reset">Clear filters</button></div>
+    <div class="grid" id="dgrid"></div>
+    <div class="none" id="dnone" hidden><h3 data-i18n="d6.none.h">No stores found</h3><p data-i18n="d6.none.p">Try a different spelling or clear the filters.</p><button class="btn" id="dreset" data-i18n="d6.reset">Clear filters</button></div>
+  </div>
+</section>
+
+<section id="dining" class="sec blue">
+  <div class="wrap">
+    <div class="sh rv"><div><p class="eye" data-i18n="d6.din.eye">Dining</p><h2 data-i18n="d6.din.h">Hungry? We've got you.</h2></div></div>
+    <div class="dgrid" id="dining-grid"></div>
+  </div>
+</section>
+
+<section id="events" class="sec">
+  <div class="wrap">
+    <div class="sh rv"><div><p class="eye" data-i18n="d6.ev.eye">Promotions & events</p><h2 data-i18n="d6.ev.h">What's on at Megalong</h2></div><span class="smp" data-i18n="sample">(sample)</span></div>
+    <div class="ftrow evrow" id="eventGrid"></div>
+  </div>
+</section>
+
+<section id="plan" class="sec blue">
+  <div class="wrap">
+    <div class="sh rv"><div><p class="eye" data-i18n="d6.plan.eye">Floor guide</p><h2 data-i18n="d6.plan.h">Find your way around</h2><p class="lede" data-i18n="d6.plan.p">Pick a level, then tap a shop for details. Sample layout for general guidance.</p></div></div>
+    <div class="planwrap"><div class="plan" id="plangrid"></div></div>
+  </div>
+</section>
+
+<section id="visit" class="sec">
+  <div class="wrap">
+    <div class="sh rv"><div><p class="eye" data-i18n="d6.vi.eye">Visit us</p><h2 data-i18n="d6.vi.h">Come say hello</h2></div></div>
+    <div class="vgrid">
+      <div class="vcards">
+        <div class="vc"><small data-i18n="visit.hours">Opening hours</small><p><span data-i18n="hoursText"></span> <em data-i18n="tbc"></em></p></div>
+        <div class="vc"><small data-i18n="visit.addr">Address</small><p data-i18n="addr.v"></p></div>
+        <div class="vc"><small data-i18n="d6.park">Parking</small><p data-i18n="d6.parkp">Parking details to be confirmed.</p></div>
+        <div class="vc"><small data-i18n="visit.phone">Phone</small><p>+60 88-000 000 <em data-i18n="sample"></em></p></div>
+        <div class="vbtns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Megalong+Mall+Donggongon+Penampang" data-i18n="d6.dir">Get Directions</a><a class="btn alt" target="_blank" rel="noopener" href="https://wa.me/60120000000" data-i18n="d6.wa">WhatsApp Us</a></div>
+      </div>
+      <div class="vmap"><iframe title="Map of Megalong Shopping Mall, Donggongon" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Megalong+Mall+Donggongon+Penampang&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="At a glance">
+  <div class="wrap sgrid">
+    <div><b data-count="4" id="st1">4</b><span data-i18n="d6.st1">Shopping floors</span></div>
+    <div><b data-count="1" id="st2">1</b><span data-i18n="d6.st2">Parking floor</span></div>
+    <div><b data-count="19" id="st3">19</b><span data-i18n="d6.st3">Sample stores</span></div>
+    <div><b>10–10</b><span data-i18n="d6.st4">Open daily (to be confirmed)</span></div>
+  </div>
+</section>
+
+<section id="leasing" class="sec lease">
+  <div class="wrap lgrid">
+    <div><p class="eye" data-i18n="d6.le.eye">Leasing</p><h2 data-i18n="d6.le.h">Want your shop at Megalong?</h2><p class="lede" data-i18n="d6.le.p">Join Penampang's busiest shopping destination. Tell us about your business and our leasing team will get in touch.</p></div>
+    <form class="lform" id="lform" novalidate>
+      <label><span data-i18n="d6.le.name">Your name</span><input id="lname" autocomplete="name"></label>
+      <label><span data-i18n="d6.le.biz">Business name</span><input id="lbiz"></label>
+      <label><span data-i18n="d6.le.phone">Phone / WhatsApp</span><input id="lphone" inputmode="tel" autocomplete="tel"></label>
+      <label><span data-i18n="d6.le.mail">Email</span><input id="lmail" type="email" autocomplete="email"></label>
+      <label class="full"><span data-i18n="d6.le.msg">Tell us about your business</span><textarea id="lmsg" rows="3"></textarea></label>
+      <button class="btn" type="submit" data-i18n="d6.le.send">Send Enquiry</button>
+      <p class="fmsg" id="fmsg" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<div class="smodal" id="smodal" hidden role="dialog" aria-modal="true" aria-labelledby="smName">
+  <div class="sbox">
+    <button class="sclose" id="sclose" aria-label="Close">&times;</button>
+    <div class="shead"><span class="smono" id="smMono"></span><div><h3 id="smName"></h3><p id="smCat"></p></div></div>
+    <div class="szone" id="smZone"></div>
+    <dl class="sdl"><dt data-i18n="d6.m.loc">Location</dt><dd id="smLoc"></dd><dt data-i18n="visit.hours">Opening hours</dt><dd><span data-i18n="hoursShort"></span> <em data-i18n="tbc"></em></dd></dl>
+    <div class="sact" id="smAct"></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <svg class="fwave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,30 C240,70 480,0 720,30 C960,60 1200,10 1440,34 L1440,0 L0,0Z"/></svg>
+  <div class="wrap fcols">
+    <div><span class="wm">Megalong</span><p data-i18n="foot.p"></p></div>
+    <div><h4 data-i18n="d6.f.explore">Explore</h4><a href="#stores" data-i18n="d6.nav.stores">Stores</a><a href="#dining" data-i18n="d6.nav.dining">Dining</a><a href="#events" data-i18n="d6.nav.events">Events</a><a href="#plan" data-i18n="d6.nav.plan">Floor Guide</a></div>
+    <div><h4 data-i18n="d6.f.contact">Contact</h4><span data-i18n="addr.v"></span><a href="tel:+6088000000">+60 88-000 000</a><a href="https://wa.me/60120000000" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div><h4 data-i18n="visit.hours">Opening hours</h4><span data-i18n="hoursText"></span><small data-i18n="tbc"></small></div>
+  </div>
+  <div class="wrap legal">&copy; <span id="yr"></span> Megalong Shopping Mall. Website by Click 4 Tech Solutions.</div>
+</footer>
+<div class="actionbar"><a href="tel:+6088000000" data-i18n="bar.call">Call</a><a href="https://wa.me/60120000000" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.google.com/maps/search/?api=1&query=Megalong+Mall+Donggongon+Penampang" target="_blank" rel="noopener" data-i18n="bar.go">Directions</a></div>
+<script src="common.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
