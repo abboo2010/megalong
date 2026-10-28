@@ -19,6 +19,7 @@ ML.extend({
     "d9.s.ok": "有座位", "d9.s.fill": "座位紧张", "d9.s.low": "几乎满座", "d9.past": "已结束", "d9.wd": "平日", "d9.we": "周末与假日", "d9.std": "标准 2D", "d9.d3": "3D", "d9.prem": "高级影厅", "d9.rel": "上映日期", "d9.rate": "分级",
     "g.Action": "动作", "g.Family": "家庭", "g.Comedy": "喜剧", "g.Romance": "爱情", "g.Animation": "动画", "g.Horror": "恐怖", "g.Drama": "剧情", "g.Adventure": "冒险", "g.Sci-Fi": "科幻" }
 });
+(function () {
 const { $, $$ } = ML;
 
 /* Sample movies (fictional titles). times = base showtimes, hall = hall number, fmt = 2D | 3D | PREM */
@@ -98,4 +99,4 @@ document.addEventListener("click", e => {
   if (e.target.id === "tclose" || e.target.id === "tmodal") closeShow();
 });
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeShow(); });
-ML.start();
+})();
